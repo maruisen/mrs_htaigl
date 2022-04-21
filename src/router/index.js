@@ -25,12 +25,16 @@ const router = new VueRouter({
   routes
 })
 router.beforeEach((to, form, next) => {
-  if (to.name != "Login") {
-    next("/Login")
+  let token =true
+  if (!token &&to.name != "Login") {
+    // console.log(to);
+
+    next("/login")
   }
-  // if (to.name == "Login") {
-  //   next("/")
-  // }
+  
+  if (token&&to.name == "Login") {
+    next("/")
+  }
   next()
 })
 export default router
