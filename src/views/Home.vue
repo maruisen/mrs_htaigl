@@ -1,6 +1,6 @@
 <template>
   <div>
-   fakh
+   我是主页
   </div>
 </template>
 <script>
